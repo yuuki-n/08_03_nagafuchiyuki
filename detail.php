@@ -50,7 +50,7 @@ if ($status == false) {
 
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">読書履歴を記録しよう</a>
+      <a class="navbar-brand" href="#">読んだ本を登録しよう</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -81,7 +81,7 @@ if ($status == false) {
       <textarea class="form-control" id="comment" name="comment" rows="3"> <?= $rs["comment"] ?></textarea>
     </div>
     <div class="form-group">
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-outline-info">送信</button>
     </div>
     <!-- idは変えたくない = ユーザーから見えないようにする-->
     <input type="hidden" name="id" value="<?= $id ?>">

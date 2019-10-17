@@ -44,11 +44,23 @@ if ($status == false) {
     $view .= '<table class="table" style="table-layout: fixed; overflow-wrap : break-word;">';
     $view .= '<thead class="thead-light">';
     $view .= '<tr>';
-    $view .= '<th>' . $result['id'] . '</t>';
-    $view .= '<a href="detail.php?id=' . $result['id'] . '" class="badge badge-primary">Edit</a>';
-    $view .= '<a href="delete.php?id=' . $result['id'] . '" class="badge badge-danger">Delete</a>';
-    $view .= '<td>' . $result['name'] . '</td>';
-    $view .= '<td>' . $result['url']  . '</td>';
+
+    // id表示をなくす
+    // $view .= '<th>' . $result['id'] . '</t>';
+
+    $view .= '<th>';
+    $view .= '<a href="detail.php?id=' . $result['id'] . '" class="btn btn-outline-primary">編集</a>';
+    $view .= '<a href="delete.php?id=' . $result['id'] . '" class="btn btn-outline-danger">削除</a>';
+
+    // confirm_php用(確認ダイアログに遷移)
+    // $view .= '<a href="confirm.php?id=' . $result['id'] . '" class="btn btn-outline-danger">削除</a>';
+
+    // 書籍名にURLをリンクせず、別々に表示する
+    // $view .= '<td>' . $result['name'] . '</td>';  
+    // $view .= '<td>' . $result['url']  . '</td>';
+
+    // 書籍名にリンクがかかるが、URLに遷移しない
+    $view .= '<td>' . ' <a href=$result["url"]> ' . $result["name"] . '</a>' . '</td>';
     $view .= '<td>' . $result['comment']  . '</td>';
     $view .= '</tr>';
     $view .= '</tbody>';
@@ -128,7 +140,6 @@ if ($status == false) {
         <tr>
           <th></th>
           <th>書籍名</th>
-          <th>URL</th>
           <th>感想</th>
         </tr>
       </thead>

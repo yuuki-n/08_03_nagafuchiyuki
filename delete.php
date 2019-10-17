@@ -10,6 +10,7 @@ $id   = $_GET['id'];
 $pdo = connectToDb();
 
 
+
 //3．データ登録SQL作成
 $sql = 'DELETE FROM gs_bm_table WHERE id=:id';
 $stmt = $pdo->prepare($sql);
