@@ -108,7 +108,13 @@ if ($status == false) {
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.php">読んだ本を登録しよう</a>
+            <a class="nav-link" href="kanri_index.php">読んだ本を登録しよう</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="user_index.php">ユーザー登録</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="user_select.php">ユーザー管理</a>
           </li>
         </ul>
       </div>

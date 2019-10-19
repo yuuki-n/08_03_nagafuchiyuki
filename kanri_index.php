@@ -41,7 +41,13 @@ $menu = menu();
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="select.php">読んだ本一覧</a>
+            <a class="nav-link" href="kanri_select.php">読んだ本一覧</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="user_index.php">ユーザー登録</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="user_select.php">ユーザー管理</a>
           </li>
         </ul>
       </div>
@@ -55,7 +61,7 @@ $menu = menu();
     </nav>
   </header>
 
-  <form action="insert.php" method="post">
+  <form action="kanri_insert.php" method="post">
     <div class="form-group">
       <label for="name">書籍名</label>
       <input type="text" class="form-control" id="name" name="name">
